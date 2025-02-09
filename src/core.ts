@@ -120,7 +120,7 @@ function calculatePersonAmount(input: {
 }): number {
   let amount = 0;
 
-  // 遍歷所有項目，計算個別用餐者的金額
+  // 所有項目，計算個別金額
   input.items.forEach(item => {
     if (item.isShared) {
       // 對於均分的項目，計算每個人應付的金額
