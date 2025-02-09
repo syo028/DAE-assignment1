@@ -56,16 +56,12 @@ export function splitBill(input: BillInput): BillOutput {
   }
 }
 
- // input format: YYYY-MM-DD, e.g. "2024-03-21"
-  // output format: YYYY年M月D日, e.g. "2024年3月21日"
-  export function formatDate(date: string): string {
-    // 將日期字串分割為年、月、日
-    const [year, month, day] = date.split('-');
-    
-    // 將月和日轉為整數以去除前導零
-    return `${year}年 ${month}月 ${day}日`;
-  }
-
+// input format: YYYY-MM-DD, e.g. "2024-03-21"
+// output format: YYYY年M月D日, e.g. "2024年3月21日" 
+function formatDate(date: string): string {
+  let [year, month, day] = date.split("-").map (Number);
+  return `${year}年${month}月${day}日`
+}
 
   // sum up all the price of the items
   export function calculateSubTotal(items: BillItem[]): number {
