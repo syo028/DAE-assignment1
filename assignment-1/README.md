@@ -1,6 +1,7 @@
 # Assignment 1
 
 學生名稱：
+Chan Tak Ying
 
 ## 使用說明
 
