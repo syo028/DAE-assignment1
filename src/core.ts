@@ -58,9 +58,9 @@ export function splitBill(input: BillInput): BillOutput {
 
 // input format: YYYY-MM-DD, e.g. "2024-03-21"
 // output format: YYYY年M月D日, e.g. "2024年3月21日" 
-function formatDate(date: string): string {
-  let [year, month, day] = date.split("-").map (Number);
-  return `${year}年${month}月${day}日`
+export function formatDate(date: string): string {
+  const [year, month, day] = date.split('-');
+  return `${year}年${parseInt(month)}月${parseInt(day)}日`;
 }
 
   // sum up all the price of the items
